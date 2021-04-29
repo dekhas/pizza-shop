@@ -1,5 +1,5 @@
 import React from 'react';
-import Logo from "./assets/img/pizza-logo.svg";
+import Logo from "../assets/img/pizza-logo.svg";
 import Button from "./Button";
 
 let Header = () => {
@@ -12,10 +12,10 @@ let Header = () => {
                         <h1>React Pizza</h1>
                         <p>самая вкусная пицца во вселенной</p>
                     </div>
-                    <Button text="HI"/>
+                    <Button className={"button--cart"} onclick="text" overline={false}>text</Button>
                 </div>
                 <div className="header__cart">
-                    <a href="/cart.html" className="button button--cart">
+                    <Button className="button--cart" onclick="cart" overline={false}>
                         <span>520 ₽</span>
                         <div className="button__delimiter"></div>
                         <svg
@@ -48,7 +48,7 @@ let Header = () => {
                             />
                         </svg>
                         <span>3</span>
-                    </a>
+                    </Button>
                 </div>
             </div>
         </div>)
