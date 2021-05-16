@@ -2,10 +2,10 @@ import React from 'react';
 import classNames from 'classnames';
 import PropTypes from "prop-types";
 
-let Button = ({className,onclick,overline,children}) => {
+let Button = ({className,onclick,outline,children}) => {
     return (
         <button onClick={onclick}
-        className={classNames('button', className, {'button--overline' : overline})}>
+        className={classNames('button', className, {'button--outline' : outline})}>
             {children}
         </button>
     )
@@ -14,12 +14,12 @@ let Button = ({className,onclick,overline,children}) => {
 Button.propTypes = {
     classNames: PropTypes.string,
     onclick: PropTypes.func,
-    overline: PropTypes.bool,
+    outline: PropTypes.bool,
 };
 
 Button.defaultProps = {
     classNames: '',
-    overline: false,
+    outline: false,
 };
 
 export  default Button;
